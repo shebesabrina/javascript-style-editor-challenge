@@ -1,3 +1,10 @@
 $(document).ready(function(){
-  // your code goes here.
+  $('#style_editor').submit(function(event) {
+    event.preventDefault();
+    let selector = $('input[name="selector"]').val()
+    let property = $('input[name="property"]').val()
+    let value =  $('input[name="value"]').val()
+
+    $(selector).css(property, value)
+  });
 });
